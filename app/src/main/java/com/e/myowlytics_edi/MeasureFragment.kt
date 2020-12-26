@@ -91,25 +91,21 @@ class MeasureFragment : Fragment(), SensorEventListener {
 
         _viewModel.wifiLive.observe(viewLifecycleOwner, Observer {
             var drawabalePath: Int
-            var text:String
+            var text = it
 
             if(it > -50){
-                text = "excellent"
                 drawabalePath = R.drawable.excelent
             } else if(  it > -60 && it <= -50){
-                text = "good"
                 drawabalePath = R.drawable.good
             } else if(  it > -70 && it <= -60){
-                text = "fair"
                 drawabalePath = R.drawable.fair
             } else {
-                text = "weak"
                 drawabalePath = R.drawable.weak
             }
             wifi_image.setImageDrawable(
                 ContextCompat.getDrawable(requireContext(), drawabalePath)
             )
-            wifi_text.text = text
+            wifi_text.text = text.toString()
         })
 
         _viewModel.soundLive.observe(viewLifecycleOwner, Observer {
