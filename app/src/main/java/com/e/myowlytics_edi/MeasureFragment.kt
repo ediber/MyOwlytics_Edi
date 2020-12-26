@@ -29,18 +29,7 @@ import com.google.android.gms.location.LocationServices
 import kotlinx.android.synthetic.main.measure_fragment.*
 import java.io.File
 
-// TODO
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-// to improve
-// 1 send data to server
-// save it with room DB
-// retrieve data from CSV file
-// 2 do it in the background
-// 3 add gyroscope
-// add better UI
-// use string resource
-// make shorter sound
-//////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 class MeasureFragment : Fragment(), SensorEventListener {
